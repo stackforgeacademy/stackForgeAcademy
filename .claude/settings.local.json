@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run:*)",
+      "Bash(npm install:*)",
+      "Bash(curl -s http://localhost:3001)",
+      "Bash(sed 's/.*className=//')",
+      "Bash(npx vite:*)",
+      "Bash(ls \"c:/Users/dice0/OneDrive/Desktop/Stack Forge/landing page\"/.env*)",
+      "Bash(npm i:*)",
+      "Bash(ls \"c:/Users/dice0/OneDrive/Desktop/Stack Forge/landing page/src/\"*.d.ts)"
+    ]
+  }
+}
