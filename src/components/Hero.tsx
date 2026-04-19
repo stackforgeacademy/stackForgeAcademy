@@ -1,6 +1,10 @@
 import { motion } from 'motion/react';
 import { Zap, Download } from 'lucide-react';
-import { generateCurriculum } from '../lib/generateCurriculum';
+
+const handleDownload = async () => {
+  const { generateCurriculum } = await import('../lib/generateCurriculum');
+  generateCurriculum();
+};
 
 export default function Hero() {
   return (
@@ -59,7 +63,7 @@ export default function Hero() {
           Apply for Selection
         </a>
         <button
-          onClick={generateCurriculum}
+          onClick={handleDownload}
           className="inline-flex items-center justify-center gap-2 bg-transparent text-slate-400 border border-white/75 px-6 py-3 sm:py-3.5 rounded-xl text-[13px] sm:text-sm font-medium transition-colors hover:border-blue-600 hover:text-white"
         >
           <Download size={15} strokeWidth={2} />

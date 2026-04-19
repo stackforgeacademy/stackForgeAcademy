@@ -247,17 +247,17 @@ export default function Mentors() {
         </div>
 
         <div className="sm:hidden">
-          <div className="-mx-4 overflow-x-auto px-4 pb-4 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
-            <div className="flex snap-x snap-mandatory gap-4 pr-4">
+          <div className="-mx-4 overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+            <div className="flex snap-x snap-mandatory">
               {MENTORS.map((mentor, i) => (
-                <div key={`${mentor.name}-mobile-${i}`} className="min-w-[85vw] max-w-[360px] snap-center">
+                <div key={`${mentor.name}-mobile-${i}`} className="w-screen flex-shrink-0 snap-center px-4">
                   <MentorCard mentor={mentor} />
                 </div>
               ))}
             </div>
           </div>
 
-          <p className="mt-4 px-1 text-[11px] uppercase tracking-[0.18em] text-slate-500">
+          <p className="mt-4 text-center text-[11px] uppercase tracking-[0.18em] text-slate-500">
             Swipe Sideways To Explore
           </p>
         </div>

@@ -271,17 +271,17 @@ export default function AlumniCarousel() {
         </div>
 
         <div className="sm:hidden">
-          <div className="-mx-4 overflow-x-auto px-4 pb-4 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
-            <div className="flex gap-4 snap-x snap-mandatory pr-4">
+          <div className="-mx-4 overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+            <div className="flex snap-x snap-mandatory">
               {alumni.map((person, i) => (
-                <div key={`${person.name}-mobile-${i}`} className="min-w-[85vw] max-w-[360px] snap-center">
+                <div key={`${person.name}-mobile-${i}`} className="w-screen shrink-0 snap-center px-4">
                   <AlumniCard person={person} />
                 </div>
               ))}
             </div>
           </div>
 
-          <p className="mt-4 px-1 text-[11px] uppercase tracking-[0.18em] text-slate-500">
+          <p className="mt-4 text-center text-[11px] uppercase tracking-[0.18em] text-slate-500">
             Swipe Sideways To Explore
           </p>
         </div>
