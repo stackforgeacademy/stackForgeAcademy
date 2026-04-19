@@ -67,7 +67,7 @@ export default function ApplicationForm() {
     'w-full bg-bg-card2 border border-white/10 rounded-lg p-3 px-3.5 text-(--text-main) text-sm outline-none transition-all focus:border-blue-500/50 focus:ring-2 focus:ring-blue-500/10 placeholder:text-slate-400/50 disabled:opacity-50 disabled:cursor-not-allowed';
 
   return (
-    <section className="py-20 bg-linear-to-b from-transparent via-blue-500/2 to-transparent" id="apply">
+    <section className="pt-8 pb-12 sm:py-20 bg-linear-to-b from-transparent via-blue-500/2 to-transparent" id="apply">
       <div className="max-w-275 mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
