@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import logoSrc from '../assets/Asset 8@4x.png';
 
 export default function SplashScreen({ onDone }: { onDone: () => void }) {
   const [phase, setPhase] = useState<'visible' | 'zoom' | 'done'>('visible');
@@ -60,28 +61,10 @@ export default function SplashScreen({ onDone }: { onDone: () => void }) {
         }}
       >
         <img
-          src="/logo.png"
+          src={logoSrc}
           alt="StackForge"
           style={{ height: 'clamp(36px, 10vw, 52px)', width: 'auto', maxWidth: '70vw' }}
-          onError={(e) => {
-            (e.target as HTMLImageElement).style.display = 'none';
-            (e.target as HTMLImageElement).nextElementSibling?.removeAttribute('hidden');
-          }}
         />
-        {/* Text fallback */}
-        <span
-          hidden
-          style={{
-            fontSize: 'clamp(22px, 6vw, 30px)',
-            fontWeight: 900,
-            letterSpacing: '-0.04em',
-            color: '#fff',
-            textTransform: 'uppercase',
-            fontStyle: 'italic',
-          }}
-        >
-          Stack<span style={{ WebkitTextStroke: '1px white', color: 'transparent' }}>Forge</span>
-        </span>
       </div>
 
       {/* Tagline */}

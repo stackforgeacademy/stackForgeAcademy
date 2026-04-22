@@ -1,5 +1,6 @@
 import { Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import logoSrc from '../assets/Asset 8@4x.png';
 
 export default function Navbar() {
   return (
@@ -9,22 +10,10 @@ export default function Navbar() {
         {/* Left — Logo */}
         <Link to="/" className="flex flex-col items-start gap-0.5 hover:opacity-90 transition-opacity shrink-0">
           <img
-            src="/logo.png"
+            src={logoSrc}
             alt="StackForge"
             className="h-6 sm:h-8 w-auto max-w-[120px] sm:max-w-none"
-            referrerPolicy="no-referrer"
-            onError={(e) => {
-              (e.target as HTMLImageElement).style.display = 'none';
-              const fallback = (e.target as HTMLImageElement).nextElementSibling as HTMLElement | null;
-              if (fallback) { fallback.classList.remove('hidden'); fallback.classList.add('flex'); }
-            }}
           />
-          <div className="hidden items-baseline">
-            <span className="text-xl sm:text-2xl font-black tracking-tighter text-white uppercase italic">
-              Stack
-              <span className="text-transparent [text-stroke:1px_white] [-webkit-text-stroke:1px_white]">Forge</span>
-            </span>
-          </div>
           <span className="hidden sm:block text-[9px] tracking-[0.2em] uppercase text-slate-500 font-medium">
             Forging India's Elite Developers
           </span>

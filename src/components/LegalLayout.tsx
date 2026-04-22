@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import Navbar from './Navbar';
 import Footer from './Footer';
 
 interface LegalLayoutProps {
@@ -14,12 +13,10 @@ interface LegalLayoutProps {
 export default function LegalLayout({ title, children, lastUpdated }: LegalLayoutProps) {
   return (
     <div className="min-h-screen bg-bg-main text-[var(--text-main)] selection:bg-blue-500/30">
-      <Navbar />
-      
-      <main className="pt-32 pb-24">
+      <main className="pt-16 pb-24">
         <div className="max-w-[800px] mx-auto px-6">
-          <Link 
-            to="/" 
+          <Link
+            to="/"
             className="inline-flex items-center gap-2 text-slate-500 hover:text-blue-500 transition-colors mb-10 group"
           >
             <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />

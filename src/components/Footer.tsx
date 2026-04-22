@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Zap } from 'lucide-react';
+import logoSrc from '../assets/Asset 8@4x.png';
 
 export default function Footer() {
   return (
@@ -8,30 +9,20 @@ export default function Footer() {
         <div className="flex flex-col items-center gap-8 mb-10">
           <Link to="/" className="flex items-center gap-2 hover:opacity-90 transition-opacity">
             <img
-              src="/logo.png"
+              src={logoSrc}
               alt="StackForge"
-              className="h-6 w-auto"
-              referrerPolicy="no-referrer"
-              onError={(e) => {
-                (e.target as HTMLImageElement).style.display = 'none';
-                (e.target as HTMLImageElement).nextElementSibling?.classList.remove('hidden');
-              }}
+              className="h-8 w-auto"
             />
-            <span className="hidden text-xl font-black tracking-tighter text-white uppercase italic">
-              Stack
-              <span className="text-transparent [text-stroke:1px_white] [-webkit-text-stroke:1px_white]">Forge</span>
-            </span>
           </Link>
 
           <nav className="w-full flex flex-col items-center gap-3 md:flex-row md:flex-wrap md:justify-center md:gap-x-8 md:gap-y-3">
             {/* <Link to="/privacy-policy" className="text-sm text-slate-500 hover:text-blue-500 transition-colors py-1 text-center">Privacy Policy</Link> */}
-            <Link to="/refund-policy" className="text-sm text-slate-500 hover:text-blue-500 transition-colors py-1 text-center">Refund Policy</Link>
-            <Link to="/terms-of-service" className="text-sm text-slate-500 hover:text-blue-500 transition-colors py-1 text-center">Terms of Service</Link>
-            <Link to="/scholarship-policy" className="text-sm text-slate-500 hover:text-blue-500 transition-colors py-1 text-center">Scholarship Policy</Link>
-            <Link to="/student-success-policy" className="text-sm text-slate-500 hover:text-blue-500 transition-colors py-1 text-center">Student Success Policy</Link>
-            <Link to="/code-of-conduct" className="text-sm text-slate-500 hover:text-blue-500 transition-colors py-1 text-center">Student Code of Conduct & Academic Integrity Policy</Link>
-            <Link to="/instructor-policy" className="text-sm text-slate-500 hover:text-blue-500 transition-colors py-1 text-center">Instructor & Mentor Responsibilities Policy</Link>
-            <a href="mailto:stackforgeacademy@gmail.com" className="text-sm text-slate-500 hover:text-blue-500 transition-colors py-1 text-center">Contact Us</a>
+            <Link to="/refund-policy" target="_blank" rel="noopener noreferrer" className="text-sm text-slate-500 hover:text-blue-500 transition-colors py-1 text-center">Refund Policy</Link>
+            <Link to="/terms-of-service" target="_blank" rel="noopener noreferrer" className="text-sm text-slate-500 hover:text-blue-500 transition-colors py-1 text-center">Terms of Service</Link>
+            <Link to="/scholarship-policy" target="_blank" rel="noopener noreferrer" className="text-sm text-slate-500 hover:text-blue-500 transition-colors py-1 text-center">Scholarship Policy</Link>
+            <Link to="/student-success-policy" target="_blank" rel="noopener noreferrer" className="text-sm text-slate-500 hover:text-blue-500 transition-colors py-1 text-center">Student Success Policy</Link>
+            <Link to="/code-of-conduct" target="_blank" rel="noopener noreferrer" className="text-sm text-slate-500 hover:text-blue-500 transition-colors py-1 text-center">Student Code of Conduct & Academic Integrity Policy</Link>
+            <Link to="/instructor-policy" target="_blank" rel="noopener noreferrer" className="text-sm text-slate-500 hover:text-blue-500 transition-colors py-1 text-center">Instructor & Mentor Responsibilities Policy</Link>
           </nav>
         </div>
 
