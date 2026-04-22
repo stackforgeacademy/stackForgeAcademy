@@ -36,7 +36,7 @@ export default function CompaniesTicker() {
   return (
     <div className="py-14 overflow-hidden bg-bg-card/30 transition-colors">
       <div className="text-center text-[11px] sm:text-xs tracking-[0.2em] text-slate-500 uppercase mb-10 font-heading font-black">
-        Our alumni <span className="text-blue-500">thrive</span> at
+        Our Students <span className="text-blue-500">AIM</span> FOR
       </div>
       <div className="relative overflow-hidden [mask-image:linear-gradient(90deg,transparent,black_15%,black_85%,transparent)]">
         <div className="flex gap-4 w-max animate-[ticker_60s_linear_infinite] items-center">

@@ -43,11 +43,11 @@ export default function TenUniqueFeatures() {
         <div className="mb-16 text-center max-w-3xl mx-auto">
           <div className="flex flex-col items-center">
             <div className="flex items-center gap-3 mb-4">
-              <div className="h-[1px] w-8 bg-blue-500/50" />
-              <span className="text-[10px] font-heading tracking-[0.3em] uppercase text-blue-500/80 font-bold">
+              {/* <div className="h-[1px] w-8 bg-blue-500/50" /> */}
+              {/* <span className="text-[10px] font-heading tracking-[0.3em] uppercase text-blue-500/80 font-bold">
                 System Architecture / Edge Case Handling
-              </span>
-              <div className="h-[1px] w-8 bg-blue-500/50" />
+              </span> */}
+              {/* <div className="h-[1px] w-8 bg-blue-500/50" /> */}
             </div>
             <h2 className="text-[clamp(32px,6vw,52px)] font-heading font-extrabold leading-[1.05] tracking-tight text-[var(--text-contrast)]">
               6 Core Pillars of <br />

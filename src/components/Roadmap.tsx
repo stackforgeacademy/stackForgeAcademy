@@ -32,7 +32,7 @@ export default function Roadmap() {
     <section className="py-24">
       <div className="max-w-[1100px] mx-auto px-6">
         <div className="text-center mb-15">
-          <div className="text-[11px] tracking-[0.14em] uppercase text-indigo-500 font-semibold mb-3">8-Month Roadmap</div>
+          {/* <div className="text-[11px] tracking-[0.14em] uppercase text-indigo-500 font-semibold mb-3">8-Month Roadmap</div> */}
           <h2 className="text-[clamp(30px,5vw,48px)] font-extrabold leading-[1.1] tracking-tight text-[var(--text-contrast)]">From Zero to <span className="text-blue-600">Offer Letter</span></h2>
           <p className="text-slate-400 text-[15px] mt-3 max-w-[500px] mx-auto">A structured, competitive plan — one coherent journey from foundations to offer-ready engineer.</p>
         </div>

@@ -80,7 +80,7 @@ export default function Hero() {
         {[
           { num: '82+', label: 'DSA Patterns' },
           { num: '₹18L', label: 'Avg. Package', color: 'text-amber-500' },
-          { num: 'IIT/IIM', label: 'Standard Curriculum' },
+          { num: 'IIT', label: 'Standard Curriculum' },
           { num: '100%*', label: 'scholarship (UPTO*)' },
         ].map((stat) => (
           <div key={stat.label} className="text-center">

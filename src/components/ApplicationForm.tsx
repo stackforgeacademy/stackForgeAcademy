@@ -19,7 +19,11 @@ export default function ApplicationForm() {
   const [errorMsg, setErrorMsg] = useState('');
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    const { name, value } = e.target;
+    let sanitized = value;
+    if (name === 'name') sanitized = value.replace(/[^a-zA-Z\s]/g, '');
+    if (name === 'phone') sanitized = value.replace(/[^0-9+\s]/g, '');
+    setFormData((prev) => ({ ...prev, [name]: sanitized }));
   };
 
   const handleSubmit = async (e: { preventDefault(): void }) => {

@@ -233,7 +233,7 @@ export default function Mentors() {
             transition={{ delay: 0.1 }}
             className="text-[clamp(32px,5vw,52px)] font-black tracking-tight text-white"
           >
-            Mentorship by <span className="text-blue-500">Active Engineers</span>
+            Mentorship by <span className="text-blue-500 whitespace-nowrap">Active Engineers</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

@@ -38,9 +38,9 @@ export default function LandingPage() {
 
         <Suspense fallback={null}>
           <Roadmap />
-          <Mentors />
+          {/* <Mentors /> */}
           <TenUniqueFeatures />
-          <AlumniCarousel />
+          {/* <AlumniCarousel /> */}
           <AdmissionProcess />
           <Pricing />
           <FAQ />
