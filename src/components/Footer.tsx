@@ -21,8 +21,8 @@ export default function Footer() {
             <Link to="/terms-of-service" target="_blank" rel="noopener noreferrer" className="text-sm text-slate-500 hover:text-blue-500 transition-colors py-1 text-center">Terms of Service</Link>
             <Link to="/scholarship-policy" target="_blank" rel="noopener noreferrer" className="text-sm text-slate-500 hover:text-blue-500 transition-colors py-1 text-center">Scholarship Policy</Link>
             <Link to="/student-success-policy" target="_blank" rel="noopener noreferrer" className="text-sm text-slate-500 hover:text-blue-500 transition-colors py-1 text-center">Student Success Policy</Link>
-            <Link to="/code-of-conduct" target="_blank" rel="noopener noreferrer" className="text-sm text-slate-500 hover:text-blue-500 transition-colors py-1 text-center">Student Code of Conduct & Academic Integrity Policy</Link>
             <Link to="/instructor-policy" target="_blank" rel="noopener noreferrer" className="text-sm text-slate-500 hover:text-blue-500 transition-colors py-1 text-center">Instructor & Mentor Responsibilities Policy</Link>
+            <Link to="/code-of-conduct" target="_blank" rel="noopener noreferrer" className="text-sm text-slate-500 hover:text-blue-500 transition-colors py-1 text-center">Student Code of Conduct & Academic Integrity Policy</Link>
           </nav>
         </div>
 
