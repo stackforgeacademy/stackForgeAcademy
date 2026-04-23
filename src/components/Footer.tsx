@@ -17,12 +17,12 @@ export default function Footer() {
 
           <nav className="w-full flex flex-col items-center gap-3 md:flex-row md:flex-wrap md:justify-center md:gap-x-8 md:gap-y-3">
             {/* <Link to="/privacy-policy" className="text-sm text-slate-500 hover:text-blue-500 transition-colors py-1 text-center">Privacy Policy</Link> */}
-            <Link to="/refund-policy" target="_blank" rel="noopener noreferrer" className="text-sm text-slate-500 hover:text-blue-500 transition-colors py-1 text-center">Refund Policy</Link>
-            <Link to="/terms-of-service" target="_blank" rel="noopener noreferrer" className="text-sm text-slate-500 hover:text-blue-500 transition-colors py-1 text-center">Terms of Service</Link>
-            <Link to="/scholarship-policy" target="_blank" rel="noopener noreferrer" className="text-sm text-slate-500 hover:text-blue-500 transition-colors py-1 text-center">Scholarship Policy</Link>
-            <Link to="/student-success-policy" target="_blank" rel="noopener noreferrer" className="text-sm text-slate-500 hover:text-blue-500 transition-colors py-1 text-center">Student Success Policy</Link>
-            <Link to="/instructor-policy" target="_blank" rel="noopener noreferrer" className="text-sm text-slate-500 hover:text-blue-500 transition-colors py-1 text-center">Instructor & Mentor Responsibilities Policy</Link>
-            <Link to="/code-of-conduct" target="_blank" rel="noopener noreferrer" className="text-sm text-slate-500 hover:text-blue-500 transition-colors py-1 text-center">Student Code of Conduct & Academic Integrity Policy</Link>
+            <Link to="/refund-policy" className="text-sm text-slate-500 hover:text-blue-500 transition-colors py-1 text-center">Refund Policy</Link>
+            <Link to="/terms-of-service" className="text-sm text-slate-500 hover:text-blue-500 transition-colors py-1 text-center">Terms of Service</Link>
+            <Link to="/scholarship-policy" className="text-sm text-slate-500 hover:text-blue-500 transition-colors py-1 text-center">Scholarship Policy</Link>
+            <Link to="/student-success-policy" className="text-sm text-slate-500 hover:text-blue-500 transition-colors py-1 text-center">Student Success Policy</Link>
+            <Link to="/instructor-policy" className="text-sm text-slate-500 hover:text-blue-500 transition-colors py-1 text-center">Instructor & Mentor Responsibilities Policy</Link>
+            <Link to="/code-of-conduct" className="text-sm text-slate-500 hover:text-blue-500 transition-colors py-1 text-center">Student Code of Conduct & Academic Integrity Policy</Link>
           </nav>
         </div>
 

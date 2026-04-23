@@ -51,7 +51,7 @@ export default function ApplicationForm() {
       const data = await res.json();
 
       if (data.success) {
-        navigate('/thank-you');
+        window.location.href = '/thankyou.html';
       } else {
         throw new Error(data.message || 'Submission failed');
       }
