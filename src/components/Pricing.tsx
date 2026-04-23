@@ -50,9 +50,12 @@ const Pricing = () => {
               </div>
               <div className="h-[1px] w-full bg-white/10 my-6" />
               <div className="space-y-4">
-                <button className="w-full h-12 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all hover:shadow-lg hover:shadow-blue-600/20">
+                <a
+                  href="#apply"
+                  className="w-full h-12 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all hover:shadow-lg hover:shadow-blue-600/20 flex items-center justify-center"
+                >
                   Apply for Selection
-                </button>
+                </a>
                 <div className="space-y-3">
                   <p className="text-center text-[11px] text-slate-400 leading-relaxed italic px-2">
                     "We're not here just to collect tuition. We're here to build engineers. Covering your final month is our way of putting skin in the game—proving we're as committed to your offer letter as you are."

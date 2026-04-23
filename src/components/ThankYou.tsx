@@ -1,7 +1,10 @@
 import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import logoSrc from '../assets/Asset 8@4x.png';
 
 export default function ThankYou() {
-  // Lock body scroll while this page is mounted
+  const navigate = useNavigate();
+
   useEffect(() => {
     document.body.style.overflow = 'hidden';
     return () => { document.body.style.overflow = ''; };
@@ -340,13 +343,37 @@ export default function ThankYou() {
           box-shadow: 0 8px 24px rgba(11,17,32,0.26);
         }
 
+        .ty-back-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          margin-top: 12px;
+          padding: 10px 20px;
+          background: transparent;
+          color: var(--muted);
+          font-family: 'DM Sans', sans-serif;
+          font-size: 12.5px;
+          font-weight: 500;
+          border: 1px solid var(--border);
+          border-radius: 8px;
+          cursor: pointer;
+          text-decoration: none;
+          width: 100%;
+          justify-content: center;
+          transition: color 0.18s, border-color 0.18s;
+          opacity: 0;
+          animation: ty-fadeUp 0.5s ease forwards 1.35s;
+        }
+
+        .ty-back-btn:hover { color: var(--navy); border-color: var(--navy); }
+
         .ty-footer-note {
           margin-top: 12px;
           font-size: 10.5px;
           color: var(--muted);
           flex-shrink: 0;
           opacity: 0;
-          animation: ty-fadeUp 0.5s ease forwards 1.3s;
+          animation: ty-fadeUp 0.5s ease forwards 1.4s;
         }
 
         @keyframes ty-fadeUp {
@@ -387,14 +414,8 @@ export default function ThankYou() {
         {/* ── LEFT ── */}
         <div className="ty-left">
 
-          <div className="ty-logo">
-            <div className="ty-logo-mark">
-              <svg width="16" height="16" viewBox="0 0 18 18" fill="none">
-                <path d="M4 7L9 4L14 7V11L9 14L4 11V7Z" stroke="white" strokeWidth="1.2"/>
-                <circle cx="9" cy="9" r="1.8" fill="white"/>
-              </svg>
-            </div>
-            <div className="ty-logo-name"><b>Stack</b>Forge Academy</div>
+          <div className="ty-logo" onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>
+            <img src={logoSrc} alt="StackForge" style={{ height: '28px', width: 'auto' }} />
           </div>
 
           <div className="ty-hero">
@@ -463,6 +484,10 @@ export default function ThankYou() {
               Join Our WhatsApp Community
             </a>
           </div>
+
+          <button className="ty-back-btn" onClick={() => navigate('/')}>
+            ← Back to Home
+          </button>
 
           <p className="ty-footer-note">© 2026 StackForge Academy &nbsp;·&nbsp; questions? hello@stackforgeacademy.in</p>
 
