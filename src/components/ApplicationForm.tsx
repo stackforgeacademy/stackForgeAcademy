@@ -40,7 +40,7 @@ export default function ApplicationForm() {
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         signal: controller.signal,
         body: JSON.stringify({
-          access_key: import.meta.env.VITE_WEB3FORMS_KEY,
+          access_key: '777467ce-32b4-456b-b379-d331d3216c22',
           subject: 'New Application — StackForge July 2026 Cohort',
           name: formData.name,
           phone: formData.phone,
