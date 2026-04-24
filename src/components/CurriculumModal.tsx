@@ -32,7 +32,7 @@ export default function CurriculumModal({ onClose }: Props) {
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         signal: controller.signal,
         body: JSON.stringify({
-          access_key: '777467ce-32b4-456b-b379-d331d3216c22',
+          access_key: '9166bd4d-c3a8-4ff2-8f4a-01452a3c13f3',
           subject: 'Curriculum Download Request — StackForge Academy',
           name: form.name,
           phone: form.phone,
