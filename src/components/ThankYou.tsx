@@ -18,31 +18,40 @@ export default function ThankYou() {
         .ty-root *, .ty-root *::before, .ty-root *::after { box-sizing: border-box; }
 
         .ty-root {
-          --navy: #0B1120;
-          --navy2: #1A2640;
-          --cream: #F7F4EE;
-          --text: #0B1120;
-          --muted: #64748B;
-          --border: #DDE3ED;
           height: 100vh;
           max-height: 100vh;
           overflow: hidden;
           font-family: 'DM Sans', sans-serif;
-          background: var(--cream);
-          color: var(--text);
+          background: #080f1e;
+          color: #fff;
           display: grid;
           grid-template-columns: 1fr 1fr;
+          position: relative;
+        }
+
+        .ty-root::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 25%;
+          transform: translate(-50%, -50%);
+          width: 600px;
+          height: 600px;
+          border-radius: 50%;
+          background: radial-gradient(circle, rgba(37,99,235,0.1) 0%, transparent 70%);
+          pointer-events: none;
         }
 
         /* ── LEFT ── */
         .ty-left {
-          background: var(--navy);
+          background: #0b1220;
           position: relative;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
           padding: 36px 44px;
           overflow: hidden;
+          border-right: 1px solid rgba(255,255,255,0.05);
         }
 
         .ty-left::before {
@@ -52,7 +61,7 @@ export default function ThankYou() {
           right: -30px;
           font-size: 340px;
           font-family: 'Playfair Display', serif;
-          color: rgba(255,255,255,0.025);
+          color: rgba(255,255,255,0.02);
           line-height: 1;
           pointer-events: none;
           user-select: none;
@@ -62,9 +71,9 @@ export default function ThankYou() {
           content: '';
           position: absolute;
           top: 0; right: 0;
-          width: 3px;
+          width: 1px;
           height: 100%;
-          background: linear-gradient(180deg, #2563EB 0%, #60A5FA 100%);
+          background: linear-gradient(180deg, #2563EB 0%, transparent 100%);
         }
 
         .ty-logo {
@@ -74,24 +83,9 @@ export default function ThankYou() {
           opacity: 0;
           animation: ty-fadeUp 0.5s ease forwards 0.1s;
           flex-shrink: 0;
+          cursor: pointer;
+          width: fit-content;
         }
-
-        .ty-logo-mark {
-          width: 32px; height: 32px;
-          border: 1.5px solid rgba(255,255,255,0.18);
-          border-radius: 8px;
-          display: flex; align-items: center; justify-content: center;
-          flex-shrink: 0;
-        }
-
-        .ty-logo-name {
-          font-size: 13px;
-          font-weight: 600;
-          color: rgba(255,255,255,0.85);
-          letter-spacing: 0.03em;
-        }
-
-        .ty-logo-name b { color: #60A5FA; }
 
         .ty-hero { position: relative; z-index: 1; flex: 1; display: flex; flex-direction: column; justify-content: center; }
 
@@ -99,8 +93,8 @@ export default function ThankYou() {
           display: inline-flex;
           align-items: center;
           gap: 8px;
-          background: rgba(37,99,235,0.18);
-          border: 1px solid rgba(96,165,250,0.3);
+          background: rgba(37,99,235,0.15);
+          border: 1px solid rgba(96,165,250,0.25);
           border-radius: 100px;
           padding: 4px 12px;
           font-size: 10px;
@@ -139,21 +133,21 @@ export default function ThankYou() {
         .ty-hero-body {
           font-size: 13.5px;
           line-height: 1.75;
-          color: rgba(255,255,255,0.52);
+          color: rgba(255,255,255,0.45);
           max-width: 360px;
           opacity: 0;
           animation: ty-fadeUp 0.6s ease forwards 0.6s;
         }
 
-        .ty-hero-body strong { color: rgba(255,255,255,0.85); font-weight: 500; }
+        .ty-hero-body strong { color: rgba(255,255,255,0.8); font-weight: 500; }
 
         .ty-callout {
           display: flex;
           align-items: flex-start;
           gap: 12px;
-          background: rgba(255,255,255,0.04);
-          border: 1px solid rgba(255,255,255,0.08);
-          border-left: 3px solid #60A5FA;
+          background: rgba(255,255,255,0.03);
+          border: 1px solid rgba(255,255,255,0.06);
+          border-left: 2px solid #2563EB;
           border-radius: 0 8px 8px 0;
           padding: 12px 16px;
           margin-top: 18px;
@@ -166,11 +160,11 @@ export default function ThankYou() {
         .ty-callout p {
           font-size: 12px;
           line-height: 1.65;
-          color: rgba(255,255,255,0.65);
+          color: rgba(255,255,255,0.45);
           margin: 0;
         }
 
-        .ty-callout p strong { color: #fff; }
+        .ty-callout p strong { color: rgba(255,255,255,0.85); }
 
         .ty-left-footer {
           display: flex;
@@ -183,15 +177,15 @@ export default function ThankYou() {
 
         .ty-cohort-tag {
           font-size: 11px;
-          color: rgba(255,255,255,0.3);
+          color: rgba(255,255,255,0.2);
         }
 
         .ty-seats-pill {
           display: flex;
           align-items: center;
           gap: 6px;
-          background: rgba(22,163,74,0.14);
-          border: 1px solid rgba(34,197,94,0.25);
+          background: rgba(22,163,74,0.1);
+          border: 1px solid rgba(34,197,94,0.2);
           border-radius: 100px;
           padding: 4px 10px;
           font-size: 11px;
@@ -210,7 +204,7 @@ export default function ThankYou() {
 
         /* ── RIGHT ── */
         .ty-right {
-          background: var(--cream);
+          background: #080f1e;
           padding: 32px 48px;
           display: flex;
           flex-direction: column;
@@ -229,13 +223,13 @@ export default function ThankYou() {
           font-family: 'Playfair Display', serif;
           font-size: 21px;
           font-weight: 700;
-          color: var(--navy);
+          color: #fff;
           margin-bottom: 4px;
         }
 
         .ty-right-header p {
           font-size: 12px;
-          color: var(--muted);
+          color: rgba(255,255,255,0.35);
           margin: 0;
         }
 
@@ -264,8 +258,9 @@ export default function ThankYou() {
         .ty-step-num {
           width: 30px; height: 30px;
           border-radius: 50%;
-          background: var(--navy);
-          color: #fff;
+          background: rgba(37,99,235,0.2);
+          border: 1px solid rgba(96,165,250,0.25);
+          color: #60A5FA;
           font-family: 'Playfair Display', serif;
           font-size: 12px;
           font-weight: 700;
@@ -279,7 +274,7 @@ export default function ThankYou() {
           width: 1px;
           flex: 1;
           min-height: 8px;
-          background: var(--border);
+          background: rgba(255,255,255,0.06);
           margin: 3px 0;
         }
 
@@ -295,13 +290,13 @@ export default function ThankYou() {
         .ty-step-title {
           font-size: 12.5px;
           font-weight: 600;
-          color: var(--navy);
+          color: rgba(255,255,255,0.9);
           margin-bottom: 2px;
         }
 
         .ty-step-desc {
           font-size: 11.5px;
-          color: var(--muted);
+          color: rgba(255,255,255,0.35);
           line-height: 1.5;
         }
 
@@ -311,66 +306,34 @@ export default function ThankYou() {
           animation: ty-fadeUp 0.5s ease forwards 1.2s;
         }
 
-        .ty-cta-label {
-          font-size: 11px;
-          color: var(--muted);
-          margin-bottom: 10px;
-        }
-
-        .ty-btn {
-          display: inline-flex;
+        .ty-back-btn {
+          display: flex;
           align-items: center;
           justify-content: center;
-          gap: 10px;
-          width: 100%;
-          padding: 12px 24px;
-          background: var(--navy);
-          color: #fff;
-          font-family: 'DM Sans', sans-serif;
-          font-size: 13px;
-          font-weight: 600;
-          border: none;
-          border-radius: 10px;
-          cursor: pointer;
-          text-decoration: none;
-          transition: transform 0.18s, box-shadow 0.18s, background 0.18s;
-          box-shadow: 0 4px 16px rgba(11,17,32,0.18);
-        }
-
-        .ty-btn:hover {
-          background: var(--navy2);
-          transform: translateY(-2px);
-          box-shadow: 0 8px 24px rgba(11,17,32,0.26);
-        }
-
-        .ty-back-btn {
-          display: inline-flex;
-          align-items: center;
           gap: 8px;
-          margin-top: 12px;
+          margin-top: 10px;
           padding: 10px 20px;
           background: transparent;
-          color: var(--muted);
+          color: rgba(255,255,255,0.3);
           font-family: 'DM Sans', sans-serif;
           font-size: 12.5px;
           font-weight: 500;
-          border: 1px solid var(--border);
+          border: 1px solid rgba(255,255,255,0.08);
           border-radius: 8px;
           cursor: pointer;
-          text-decoration: none;
           width: 100%;
           justify-content: center;
           transition: color 0.18s, border-color 0.18s;
           opacity: 0;
-          animation: ty-fadeUp 0.5s ease forwards 1.35s;
+          animation: ty-fadeUp 0.5s ease forwards 1.3s;
         }
 
-        .ty-back-btn:hover { color: var(--navy); border-color: var(--navy); }
+        .ty-back-btn:hover { color: #fff; border-color: rgba(255,255,255,0.2); }
 
         .ty-footer-note {
           margin-top: 12px;
           font-size: 10.5px;
-          color: var(--muted);
+          color: rgba(255,255,255,0.18);
           flex-shrink: 0;
           opacity: 0;
           animation: ty-fadeUp 0.5s ease forwards 1.4s;
@@ -386,24 +349,20 @@ export default function ThankYou() {
           50%       { opacity: 0.4; transform: scale(0.6); }
         }
 
-        /* ── MOBILE ── */
         @media (max-width: 780px) {
           .ty-root {
             grid-template-columns: 1fr;
             grid-template-rows: auto 1fr;
-          }
-          .ty-left {
-            padding: 24px 22px 20px;
             height: auto;
+            max-height: none;
+            overflow: auto;
           }
+          .ty-left { padding: 24px 22px 20px; height: auto; }
           .ty-left::before { font-size: 160px; }
           .ty-callout { display: none; }
           .ty-hero h1 { font-size: clamp(22px, 6vw, 30px); margin-bottom: 8px; }
           .ty-hero-body { font-size: 12px; }
-          .ty-right {
-            padding: 20px 22px;
-            overflow-y: auto;
-          }
+          .ty-right { padding: 20px 22px; overflow-y: auto; }
           .ty-right-header { margin-bottom: 14px; }
           .ty-stepper { margin-bottom: 14px; }
         }
@@ -414,7 +373,7 @@ export default function ThankYou() {
         {/* ── LEFT ── */}
         <div className="ty-left">
 
-          <div className="ty-logo" onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>
+          <div className="ty-logo" onClick={() => navigate('/')}>
             <img src={logoSrc} alt="StackForge" style={{ height: '28px', width: 'auto' }} />
           </div>
 
@@ -475,19 +434,10 @@ export default function ThankYou() {
           </div>
 
           <div className="ty-cta-block">
-            <p className="ty-cta-label">Meanwhile, meet your future batchmates 👇</p>
-            <a href="#" className="ty-btn">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
-                <path d="M20.52 3.48A11.93 11.93 0 0012 0C5.37 0 0 5.37 0 12c0 2.11.55 4.17 1.6 5.98L0 24l6.18-1.62A11.94 11.94 0 0012 24c6.63 0 12-5.37 12-12 0-3.21-1.25-6.22-3.48-8.52z" fill="white" fillOpacity="0.85"/>
-                <path d="M17.5 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.79-1.67-2.09-.18-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.27.5 1.7.63.72.23 1.37.2 1.89.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z" fill="#0B1120"/>
-              </svg>
-              Join Our WhatsApp Community
-            </a>
+            <button className="ty-back-btn" onClick={() => navigate('/')}>
+              ← Back to Home
+            </button>
           </div>
-
-          <button className="ty-back-btn" onClick={() => navigate('/')}>
-            ← Back to Home
-          </button>
 
           <p className="ty-footer-note">© 2026 StackForge Academy &nbsp;·&nbsp; questions? hello@stackforgeacademy.in</p>
 

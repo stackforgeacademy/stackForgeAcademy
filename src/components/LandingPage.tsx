@@ -42,7 +42,7 @@ export default function LandingPage() {
           <TenUniqueFeatures />
           {/* <AlumniCarousel /> */}
           <AdmissionProcess />
-          <Pricing />
+          {/* <Pricing /> */}
           <FAQ />
 
           {/* Final CTA Section */}

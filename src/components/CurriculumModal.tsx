@@ -1,4 +1,5 @@
 import { useState, type ChangeEvent } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { X, Download, User, Phone, Mail, Loader2 } from 'lucide-react';
 
 interface Props {
@@ -6,6 +7,7 @@ interface Props {
 }
 
 export default function CurriculumModal({ onClose }: Props) {
+  const navigate = useNavigate();
   const [form, setForm] = useState({ name: '', phone: '', email: '' });
   const [status, setStatus] = useState<'idle' | 'submitting' | 'error'>('idle');
   const [errorMsg, setErrorMsg] = useState('');
@@ -43,9 +45,7 @@ export default function CurriculumModal({ onClose }: Props) {
       const data = await res.json();
 
       if (data.success) {
-        onClose();
-        const { generateCurriculum } = await import('../lib/generateCurriculum');
-        generateCurriculum();
+        navigate('/curriculum-thank-you');
       } else {
         throw new Error(data.message || 'Submission failed');
       }

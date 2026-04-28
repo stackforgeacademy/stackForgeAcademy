@@ -14,6 +14,7 @@ import ScholarshipPolicy from './components/ScholarshipPolicy';
 import CodeOfConduct from './components/CodeOfConduct';
 import StudentSuccessPolicy from './components/StudentSuccessPolicy';
 import ThankYou from './components/ThankYou';
+import CurriculumThankYou from './components/CurriculumThankYou';
 import ScrollToTop from './components/ScrollToTop';
 import SplashScreen from './components/SplashScreen';
 
@@ -36,6 +37,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/thank-you" element={<ThankYou />} />
+            <Route path="/curriculum-thank-you" element={<CurriculumThankYou />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/refund-policy" element={<RefundPolicy />} />
             <Route path="/terms-of-service" element={<TermsOfService />} />
