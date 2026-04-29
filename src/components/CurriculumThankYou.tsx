@@ -1,16 +1,20 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import logoSrc from '../assets/Asset 8@4x.png';
 
 export default function CurriculumThankYou() {
   const navigate = useNavigate();
+  const hasDownloaded = useRef(false);
 
   useEffect(() => {
-    const triggerDownload = async () => {
-      const { generateCurriculum } = await import('../lib/generateCurriculum');
-      generateCurriculum();
-    };
-    triggerDownload();
+    if (hasDownloaded.current) return;
+    hasDownloaded.current = true;
+    const a = document.createElement('a');
+    a.href = '/StackForge_Curriculum.pdf';
+    a.download = 'StackForge_Curriculum.pdf';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
   }, []);
 
   return (
