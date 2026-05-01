@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Zap, Download } from 'lucide-react';
+import { trackPixelEvent } from '../lib/utils';
 import CurriculumModal from './CurriculumModal';
 
 export default function Hero() {
@@ -59,13 +60,17 @@ export default function Hero() {
         >
           <a
             href="#apply"
+            onClick={() => trackPixelEvent('InitiateCheckout')}
             className="inline-flex items-center justify-center gap-2 bg-gradient-to-br from-[#2f3080] to-[#2a65c5] text-white px-7 py-3 sm:py-3.5 rounded-xl text-[14px] sm:text-[15px] font-semibold transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_40px_rgba(99,102,241,0.55)] shadow-[0_4px_30px_rgba(99,102,241,0.4)]"
           >
             <Zap size={15} strokeWidth={2.5} />
             Apply for Selection
           </a>
           <button
-            onClick={() => setShowModal(true)}
+            onClick={() => {
+              trackPixelEvent('Download');
+              setShowModal(true);
+            }}
             className="inline-flex items-center justify-center gap-2 bg-transparent text-slate-400 border border-white/75 px-6 py-3 sm:py-3.5 rounded-xl text-[13px] sm:text-sm font-medium transition-colors hover:border-blue-600 hover:text-white"
           >
             <Download size={15} strokeWidth={2} />

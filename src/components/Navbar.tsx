@@ -1,5 +1,6 @@
 import { Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { trackPixelEvent } from '../lib/utils';
 import logoSrc from '../assets/Asset 8@4x.png';
 
 export default function Navbar() {
@@ -42,6 +43,7 @@ export default function Navbar() {
         <div className="shrink-0">
           <a
             href="/#apply"
+            onClick={() => trackPixelEvent('InitiateCheckout')}
             className="bg-blue-600 text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg text-[11px] sm:text-sm font-bold hover:bg-blue-700 transition-all whitespace-nowrap"
           >
             <span className="sm:hidden">Apply</span>

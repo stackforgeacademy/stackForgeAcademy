@@ -1,6 +1,7 @@
 import { useState, type ChangeEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { X, Download, User, Phone, Mail, Loader2 } from 'lucide-react';
+import { trackPixelEvent } from '../lib/utils';
 
 interface Props {
   onClose: () => void;
@@ -45,6 +46,8 @@ export default function CurriculumModal({ onClose }: Props) {
       const data = await res.json();
 
       if (data.success) {
+        // Track Lead event on successful curriculum download form submission
+        trackPixelEvent('Lead');
         navigate('/curriculum-thank-you');
       } else {
         throw new Error(data.message || 'Submission failed');

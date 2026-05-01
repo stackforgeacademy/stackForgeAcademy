@@ -1,7 +1,8 @@
-import { useState, type ChangeEvent } from 'react';
+import { useState, useEffect, type ChangeEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { User, Phone, Mail, ArrowRight, AlertCircle, Loader2 } from 'lucide-react';
+import { trackPixelEvent } from '../lib/utils';
 import CountdownTimer from './CountdownTimer';
 
 interface FormData {
@@ -17,6 +18,11 @@ export default function ApplicationForm() {
   const [formData, setFormData] = useState<FormData>({ name: '', phone: '', email: '' });
   const [status, setStatus] = useState<Status>('idle');
   const [errorMsg, setErrorMsg] = useState('');
+
+  // Track ViewContent when component mounts (user lands on /apply section)
+  useEffect(() => {
+    trackPixelEvent('ViewContent');
+  }, []);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -51,6 +57,8 @@ export default function ApplicationForm() {
       const data = await res.json();
 
       if (data.success) {
+        // Track Lead event on successful form submission
+        trackPixelEvent('Lead');
         navigate('/thank-you');
       } else {
         throw new Error(data.message || 'Submission failed');
